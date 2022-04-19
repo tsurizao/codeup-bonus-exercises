@@ -1,4 +1,6 @@
 (function () {
+    //  This app stores library books in a checkout cart
+    //  and can store multiple book objects in an array.
     function libApp() {
         var booksToCheckout = [];
         var confirmation = confirm("Would you like to checkout some books?");
