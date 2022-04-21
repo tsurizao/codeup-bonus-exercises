@@ -79,22 +79,33 @@
     var flag = true;
     while (flag) {
         var preference = prompt("What type of food would you prefer, please enter one of the following options: burgers, chicken, BBQ, burritos, asian cuisine, sandwiches, fish, mexican-food, pizza, wings, bar-grill, italian, seafood, breakfast");
-        var confirmation = confirm("You chose " + preference + ", is that correct?");
-        if (confirmation) {
-            flag = false;
+        if(typeof preference !== "string"){
+            continue;
         }
-    }
+        var confirmation = confirm("You chose " + preference + ", is that correct?");
+        if (!confirmation) {
+            continue;
+        }
 
-    var searchedRestaurants = [];
-    restaurantSearch(preference);
-    function restaurantSearch(input) {
-        for (var i = 0; i < restaurants.length; i++) {
-            if (input === restaurants[i].specialty) {
-                searchedRestaurants.push(restaurants[i].name);
+        var searchedRestaurants = [];
+        restaurantSearch(preference);
+
+        function restaurantSearch(input) {
+            for (var i = 0; i < restaurants.length; i++) {
+                if (input === restaurants[i].specialty) {
+                    searchedRestaurants.push(restaurants[i].name);
+                }
             }
         }
+
+        var suggestedRestaurants = searchedRestaurants.join(", ");
+        alert('Here is a list of options:\n' + suggestedRestaurants);
+        var endConfirm = confirm("Were you satisfied with this list?");
+        if(endConfirm){
+            alert('Thanks for choosing this food app! Have a nice day');
+            flag = false;
+        } else {
+            alert("Okay, no problem, let's try again.");
+        }
     }
-    var suggestedRestaurants = searchedRestaurants.join(", ");
-    alert('Here is a list of options:\n' + suggestedRestaurants);
-    alert('Thanks for choosing this food app!');
 }());
