@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Mini Exercise</title>
+</head>
+<body>
+<-- Mini Exercise
+
+Create a form with a single text input and submit button.
+
+Go to https://request-inspector.glitch.me/, create an endpoint,
+and submit various values in the form using a method of GET and
+method of POST. Take a look at the information for the various
+form submissions sent.
+
+Add a few addtional form inputs and see if your form contains the
+additional information. Don't forget to include name attributes! -->
+
+<form method="POST" action="https://request-inspector.glitch.me">
+    <label for="first-name">Enter First Name</label>
+    <input type="text" name="first-name" id="first-name">
+    <br>
+    <label for="alias">Enter Your Alias</label>
+    <input type="text" name="alias" id="alias">
+    <br>
+    <label for="last-name">Enter Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
