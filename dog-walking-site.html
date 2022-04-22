@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Walkers!</title>
+</head>
+<body>
+<header>
+    <!-- Fictitious Company -->
+    <h1>Welcome to Dog Walkers!</h1>
+    <em>Who let the dogs out? <strong>We did!</strong>&trade;</em>
+</header>
+<main>
+    <form method="POST" action="https://request-inspector.glitch.me">
+        <p>Please fill out a registration for your dog. We'll match you with the perfect Dog Walker!</p>
+        <br>
+        <label for="human-name">First and last name(of dog owner)</label>
+        <input type="text" id="human-name" name="human-name" placeholder="Enter full name here">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email here">
+        <br>
+        <label for="dog-name">Dog's name</label>
+        <input type="text" id="dog-name" name="dog-name" placeholder="Enter dog's name">
+        <br>
+        <br>
+        <label for="behavior">Please describe your dog's temperament and typical behavior around new people or other
+            dogs.<br>
+            <textarea name="behavior" id="behavior" cols="30" rows="10" placeholder="Enter behavior here"></textarea>
+        </label>
+        <br>
+        <label for="dog-size">Please select your dog's size:
+            <select id="dog-size" name="dog-size">
+                <option value="extrasmall">Extra Small (under 20 lbs)</option>
+                <option value="small">Small (20 - 30 lbs)</option>
+                <option value="medium">Medium (30 - 50 lbs)</option>
+                <option value="large">Large (50 - 90 lbs)</option>
+                <option value="extralarge">Extra Large (90+ lbs)</option>
+            </select>
+        </label>
+        <br>
+        <input type="submit" value="Submit Your Information">
+    </form>
+    <footer>
+        <p><em>&copy;2022 Dog Walkers, Inc</em></p>
+    </footer>
+</main>
+</body>
+</html>

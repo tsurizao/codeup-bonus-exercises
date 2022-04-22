@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State Of Teksuz</title>
+</head>
+<body>
+<!-- practice recreating a printable document in web document form -->
+<header>
+    <h5>State of Teksuz</h5>
+    <h1>TEKSUZ LEASE AGREEMENT</h1>
+    <hr>
+</header>
+<main>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        This lease agreement(this "Agreement") is made this<input type="text" id="today-date-1" name="today-date-1">, 20
+        <input type="text" is="today-date-2" name="today-date-2">by and between:
+        <p>
+            <label for="landlord">
+                <strong>Landlord:</strong>
+            </label>
+            <input type="text" id="landlord" name="landlord">("Landlord")AND
+        </p>
+        <p>
+            <label for="tenant">
+                <strong>Tenant(s):</strong>
+            </label>
+            <input type="text" id="tenant" name="tenant">("Tenant").
+        </p>
+        <p>In the event there is more than one Tenant, each reference to "Tenant" shall apply to each of them, jointly
+            and severally. Each tenant is jointly and severally liable to Landlord for payment of rent and performance
+            in accordance with all other terms of this Agreement. Each Landlord and Tenant may be referred to
+            individually as a "Party" and collectively as "Parties."</p>
+        <ol>
+            <li>
+                <strong>Premesis.</strong> The premises leased is a/an
+                <label><input type="checkbox">apartment</label>
+                <label><input type="checkbox">house</label>
+                <label><input type="checkbox">condominium</label>
+                <label><input type="checkbox">room</label>
+                <label><input type="checkbox">townhouse</label>
+                <label><input type="checkbox">duplex</label>
+                <label><input type="checkbox">semi-detached house</label>
+                <label for="other"><input type="checkbox">other</label><input type="text" id="other" name="other">with:
+                <ol>
+                    <li>
+                        <input type="text" id="bedroom" name="bedroom-number">
+                        <label for="bedroom">bedroom(s)</label>
+                    </li>
+                    <li>
+                        <input type="text" id="bathroom" name="bathroom-number">
+                        <label for="bathroom">bathroom(s)</label>
+                    </li>
+                    <li>
+                        <input type="text" id="parking" name="parking-spaces">
+                        <label for="parking">parking space(s)</label>
+                        <input type="checkbox" id="no-parking">
+                        <label for="no-parking">Parking is not included with the Premises</label>
+                    </li>
+                </ol>
+                <label for="address">located at</label>
+                <input id="address" type="text" name="address">,
+                <label for="city">City of </label>
+                <input type="text" name="city" id="city">
+                <label for="state">, State of </label>
+                <input type="text" name="state" id="state">
+                <label for="zipcode">, </label>
+                <input type="text" id="zipcode" name="zipcode">
+                <br>
+                <p>
+                    Storage:
+                    <br>
+                    <input type="checkbox" id="storage-checkbox" name="storage-checkbox">
+                    <label for="storage-checkbox">The Premises includes the following storage space:</label>
+                    <input type="text" name="storage-space" id="storage-space">
+                </p>
+                <p>
+                    Furnishings: (check one)
+                    <input type="radio" id="not-furnished" name="is-furnished" value="not-furnished">
+                    <label for="furnished">The Premises is <span>NOT</span> furnished.</label>
+                    <input type="radio" id="furnished" name="is-furnished" value="furnished">
+                    <label for="furnished">The Premises includes the following furnishings:</label>
+                    <br>
+                    <textarea name="included-furnishings" id="" cols="30" rows="10"
+                              placeholder="Please include all furnishings here."></textarea>
+                </p>
+                <p>
+                    <label for="additional">Additional description of the premises</label>
+                    <br>
+                    <textarea name="additional" id="additional" cols="30" rows="10"
+                              placeholder="Please include any additional descriptions."></textarea>
+                </p>
+            <li>
+                <p>
+                    <strong>Agreement to Lease.</strong> Landlord agrees to lease to Tenant and Tenant agrees to lease
+                    from Landlord,
+                    according to the terms and conditions set forth herein, the Premises.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Term.</strong> This agreement shall be considered a: (check one)
+                </p>
+            </li>
+        </ol>
+        <input type="checkbox" id="fixed-lease" name="fixed-lease">
+        <label for="fixed-lease">Fixed Lease.<label for="term-beg-1"> This Agreement will be for a term beginning
+            on</label>
+            <input type="text" id="term-beg-1" name="term-beg-1"></label>
+        <label for="term-beg-2">20</label>
+        <input type="text" id="term-beg-2" name="term-beg-2">
+        and ending on<input type="text" name="term-end-1">, 20
+        <input type="text" id="term-end-2" name="term-end-2">
+        At the end of the term:
+        <br>
+        <input type="checkbox" id="holdover-tenancy" name="holdover-tenancy">
+        A month-to-month holdover tenancy will be created. If Landlord accepts a rent payment from
+        Tenant, other than past due rent or additional rent, after the Term expires, both parties
+        understand that a month-to-month holdover tenancy will be created at the agreed upon monthly
+        rent, unless proper notice has been served as required by applicable laws. If either Tenant or
+        Landlord wishes to end the month-to-month tenancy, such Party must provide at least thirty (30)
+        days' written notice before the desired termination date.
+        <p>
+            <input type="submit" value="Submit Form">
+        </p>
+    </form>
+</main>
+</body>
+</html>
