@@ -1,4 +1,4 @@
-// this function that will calculate the AREA of a circle given a RADIUS
+// this function will calculate the AREA of a circle given a RADIUS
 function circleAreaRadius(radius) {
     return radius <= 0 ? "Please provide positive radius." : radius * radius * Math.PI;
 }
