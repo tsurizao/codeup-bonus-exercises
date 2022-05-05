@@ -42,20 +42,24 @@ const products = [
 // returnProductObjectsNotInStock(products)
 
 function returnMostExpensiveProductObjectInStock(products) {
+    var mostExpensiveItem ="";
     var mostExpensive = 0;
     for (var i = 0; i < products.length; i++) {
         if (products[i].priceInCents > mostExpensive && products[i].isInStock === true) {
             mostExpensive = products[i].priceInCents;
+            mostExpensiveItem = products[i].name;
         }
     }
     return mostExpensive;
 }
 
 function returnLeastExpensiveProductObjectInStock(products) {
+    var leastExpensiveItem = "";
     var leastExpensive = Number.MAX_VALUE;
     for (var i = 0; i < products.length; i++) {
         if (products[i].priceInCents < leastExpensive && products[i].isInStock === true) {
             leastExpensive = products[i].priceInCents;
+            leastExpensiveItem = products[i].name;
         }
     }
     return leastExpensive;
