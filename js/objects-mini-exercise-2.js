@@ -50,7 +50,7 @@ function returnMostExpensiveProductObjectInStock(products) {
             mostExpensiveItem = products[i].name;
         }
     }
-    return mostExpensive;
+    return mostExpensiveItem;
 }
 
 function returnLeastExpensiveProductObjectInStock(products) {
@@ -62,7 +62,7 @@ function returnLeastExpensiveProductObjectInStock(products) {
             leastExpensiveItem = products[i].name;
         }
     }
-    return leastExpensive;
+    return leastExpensiveItem;
 }
 
 function returnAveragePriceOfAllProductsInStock(products) {
