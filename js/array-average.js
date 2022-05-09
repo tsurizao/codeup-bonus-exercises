@@ -10,4 +10,6 @@
         }
         return total / array.length;
     }
+    arrayAverageCalculator(arr1);
+    arrayAverageCalculator(arr2);
 }());
