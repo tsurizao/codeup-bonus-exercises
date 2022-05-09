@@ -10,6 +10,6 @@
         }
         return total / array.length;
     }
-    arrayAverageCalculator(arr1);
-    arrayAverageCalculator(arr2);
+    console.log(arrayAverageCalculator(arr1));
+    console.log(arrayAverageCalculator(arr2));
 }());
