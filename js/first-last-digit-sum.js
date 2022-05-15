@@ -20,8 +20,8 @@
 
     // This function accepts an integer and returns the sum of the first
     // and last digit, WHILE LOOP version.  If a number is a single digit
-    //     // such as 5 then the sum will equal 10, since 5 is technically the
-    //     // first and last digit.
+    // such as 5 then the sum will equal 10, since 5 is technically the
+    // first and last digit.
 
     function whileLoopFirstAndLastDigitSum(num) {
         if (parseFloat(num) === Math.floor(parseFloat(num))) {
@@ -39,7 +39,7 @@
 
     // This function accepts an integer and returns the sum of the first
     // and last digit, FOR EACH LOOP version.  If a number is a single digit
-    //     // such as 5 then the sum will equal 10, since 5 is technically the
-    //     // first and last digit.
+    // such as 5 then the sum will equal 10, since 5 is technically the
+    // first and last digit.
 
 }());
