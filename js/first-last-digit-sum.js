@@ -1,4 +1,4 @@
-(function () {
+// (function () {
     "use strict"
 
     // There are MUCH easier ways to handle adding the first/last digit
@@ -77,4 +77,4 @@
             return "Please us an integer(non-decimal) value."
         }
     }
-}());
+// }());
