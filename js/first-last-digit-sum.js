@@ -7,11 +7,10 @@
     // first and last digit.
 
     function forLoopFirstAndLastDigitSum(num) {
-        if (num === parseInt(num)) {
+        if (num === Math.floor(num)) {
             let sum = 0;
-            for (let i = num; i !== 0; i++) {
-                let lastNumber = num % 10;
-                sum += lastNumber + i;
+            for (let i = num; i !== 0; i = Math.floor(i / 10)) {
+                sum = num % 10 + i;
             }
             return sum;
         } else {
@@ -25,7 +24,7 @@
     //     // first and last digit.
 
     function whileLoopFirstAndLastDigitSum(num) {
-        if (num === Math.floor(num)) {
+        if (parseFloat(num) === Math.floor(parseFloat(num))) {
             let sum = 0;
             let i = num;
             while (i !== 0) {
