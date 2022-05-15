@@ -5,7 +5,7 @@
     // of an integer together (such as:
 
     function easyFirstAndLastDigitSumFunction(num) {
-        console.log("Initial decimal places are not used for calculation.");
+        console.log("Decimal places are not used for calculation.");
         let array = Math.floor(num).toString().split("");
         return parseInt(array[0]) + parseInt(array[array.length - 1]);
     }
@@ -19,7 +19,7 @@
     // first and last digit.
 
     function forLoopFirstAndLastDigitSum(num) {
-        console.log("Initial decimal places are not used for calculation.");
+        console.log("Decimal places are not used for calculation.");
         if (parseFloat(num) === Math.floor(parseFloat(num))) {
             let sum = 0;
             for (let i = num; i !== 0; i = Math.floor(i / 10)) {
@@ -37,7 +37,7 @@
     // first and last digit.
 
     function whileLoopFirstAndLastDigitSum(num) {
-        console.log("Initial decimal places are not used for calculation.");
+        console.log("Decimal places are not used for calculation.");
         if (parseFloat(num) === Math.floor(parseFloat(num))) {
             let sum = 0;
             let i = num;
@@ -58,7 +58,7 @@
     // array, the number/string is converted to an array.
 
     function forEachLoopFirstAndLastDigitSum(num) {
-        console.log("Initial decimal places are not used for calculation.");
+        console.log("Decimal places are not used for calculation.");
         let newNum = Math.floor(num);
         if (parseFloat(num) === num) {
             let numbers = num.toString().split("");
