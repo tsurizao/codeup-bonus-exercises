@@ -84,11 +84,9 @@
     let toDoButton = document.getElementById("addTodo");
     let toDoText = document.getElementById("todo");
 
-    toDoButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (toDoText.value.trim() !== "") {
+    toDoButton.addEventListener("click", function () {
+        if (toDoText.value.trim() === "") return;
             document.getElementById("todosList").innerHTML += "<li>" + toDoText.value + "</li>";
-        }
         toDoText.value = "";
     });
 
@@ -102,10 +100,10 @@
 
     setInterval(function () {
         if (toggleFlag) {
-            if (headerSize !== "10px") {
-                headerSize = "10px";
-            } else {
+            if (headerSize === "10px") {
                 headerSize = "20px";
+            } else {
+                headerSize = "10px";
             }
             for (let i = 0; i < document.querySelectorAll("h1").length; i++) {
                 document.querySelectorAll("h1")[i].style.fontSize = headerSize;
@@ -119,13 +117,8 @@
 
     let toggleButton = document.getElementById("toggleH1");
 
-    toggleButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        if(toggleFlag){
-            toggleFlag = false;
-        } else if(!toggleFlag){
-            toggleFlag = true;
-        }
+    toggleButton.addEventListener("click", function () {
+        toggleFlag = !toggleFlag;
     });
 
     // DOM Question #4
@@ -143,7 +136,9 @@
 
     let googleButton = document.getElementById("google");
     googleButton.addEventListener("click", function(){
-        window.open("https://www.google.com");
+        // window.open("https://www.google.com");
+        // location.assign("https://www.google.com");
+        window.location = ("https://www.google.com");
     });
 
 
@@ -154,8 +149,7 @@
     let inputValue = document.getElementById("userInput");
     let currentParagraph = document.getElementById("madLib");
     let madLibButton = document.getElementById("submitString");
-    madLibButton.addEventListener("click", function(e){
-        e.preventDefault();
+    madLibButton.addEventListener("click", function(){
         currentParagraph.innerHTML += " " + inputValue.value;
     });
 </script>
