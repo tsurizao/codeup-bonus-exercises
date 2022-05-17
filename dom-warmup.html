@@ -26,10 +26,9 @@
         let h1Total = 0;
         $("#add-btn").on("click", function(e){
             e.preventDefault();
-            let numberToAdd = $("#number-input")[0].value;
-            h1Total += parseFloat(numberToAdd);
-            $("h1")[0].innerText = h1Total;
-            $("#number-input")[0].value = "";
+            let numberToAdd = parseFloat($("#number-input").val());
+            h1Total += numberToAdd;
+            $("#number-output")[0].innerText = h1Total;
         });
 
         // HINTS
