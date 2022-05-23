@@ -25,15 +25,15 @@
     const output = document.querySelector('#output');
     const input = document.querySelector('#number-input');
     const numBtn = document.querySelector('#num-btn');
-    numBtn.addEventListener('click', function() {
+    numBtn.addEventListener('click', function () {
         output.innerText = input.value;
     });
-    numBtn.addEventListener("click", function(){
-       if (input.value === "42"){
-           window.location = "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy";
-       }
-    });
 
+    numBtn.addEventListener("click", function () {
+        if (input.value === "42") {
+            window.location = "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy";
+        }
+    });
 </script>
 
 </body>
