@@ -26,12 +26,8 @@
     const input = document.querySelector('#number-input');
     const numBtn = document.querySelector('#num-btn');
     numBtn.addEventListener('click', function () {
-        output.innerText = input.value;
-        if (input.value === "42") {
-            window.location = "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy";
-        }
+        input.value === "42" ? window.location = "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy" : output.innerText = input.value;
     });
 </script>
-
 </body>
 </html>
