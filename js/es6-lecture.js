@@ -220,7 +220,7 @@ const addNames = (fName, lName) => `${fName} ${lName}`;
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
-var doubleInput = (input) => input * 2;
+var doubleInput = input => input * 2;
 
 
 // ============== Default Parameter Values
