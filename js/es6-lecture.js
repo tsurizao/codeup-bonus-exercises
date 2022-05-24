@@ -91,18 +91,18 @@ console.log(output);
 
 // Can pass in expressions to ${}
 
-// const output = `I ate ${2 + 2} slices of pizza.`;
-// console.log(output);
+const pizza = `I ate ${2 + 2} slices of pizza.`;
+console.log(pizza);
 
 
 // ============== MINI EXERCISE
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
-// var greatDessert = 'banana pudding';
-// var badDessert = 'rhubarb pie';
-// var dessertMessage = 'Well, I love ' + greatDessert + ' ' + 'but I don\'t care for ' + badDessert + '.';
-// console.log(dessertMessage);
+const greatDessert = 'banana pudding';
+const badDessert = 'rhubarb pie';
+const dessertMessage = `Well, I love ${greatDessert} but I don't care for ${badDessert}.`;
+console.log(dessertMessage);
 
 
 // ============== for ..of loop (works on node lists!!!)
