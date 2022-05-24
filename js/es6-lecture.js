@@ -8,7 +8,6 @@
 // console.log(num2);
 
 
-
 // ============== Let and Const (block scope vs. function scope)
 
 // var vs. let vs. const
@@ -65,7 +64,6 @@ let lastName = "Swanson";
 // console.log(quote);
 
 
-
 // ES6 Template Strings...
 
 let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
@@ -107,32 +105,48 @@ console.log(dessertMessage);
 
 // ============== for ..of loop (works on node lists!!!)
 
-// const numbers = ["one", "two", "three"];
+const numbers = ["one", "two", "three"];
 
-// const people = [
-//     {
-//         firstN: 'bob',
-//         lastN: 'smith'
-//     },
-//     {
-//         firstN: 'sally',
-//         lastN: 'smith'
-//     }
-// ];
+for (let number of numbers) {
+    console.log(number);
+}
+
+const hello = "hello";
+
+for(let letter of hello){
+    console.log(letter);
+}
+
+const people = [
+    {
+        firstN: 'bob',
+        lastN: 'smith'
+    },
+    {
+        firstN: 'sally',
+        lastN: 'smith'
+    }
+];
+
 
 // regular for loop
-// for (var i = 0; i < people.length; i += 1) {
-//     console.log(people[i].firstN);
-// }
+for (var i = 0; i < people.length; i += 1) {
+    console.log(people[i].firstN);
+}
 
 // forEach loop version
-// people.forEach(function(person) {
-//     console.log(person.firstN);
-// });
+people.forEach(function(person) {
+    console.log(person.firstN);
+});
 
 // for...of loop
-// for (let person of people) {
-//     console.log(person.firstN);
+for (let person of people) {
+    console.log(person.firstN);
+}
+
+// const lis = document.querySelectorAll('li');
+// for(let li of lis){
+//     console.log(li);
 // }
 
 
@@ -147,13 +161,17 @@ console.log(dessertMessage);
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 //
-// var message = '';
-// var names = ['John', 'Paul', 'George', 'Ringo'];
+var message = '';
+var names = ['John', 'Paul', 'George', 'Ringo'];
 // for (var i = 0; i < names.length; i += 1) {
 //     message += 'Hello, ' + names[i] + '\n';
 // }
-// console.log(message);
 
+for (let name of names){
+    message += `Hello, ${name}\n`
+}
+
+console.log(message);
 
 
 // ============== Arrow Functions
@@ -334,9 +352,6 @@ console.log(dessertMessage);
 // }
 
 
-
-
-
 // destructuring with arrays...
 
 // let cats = ["CJ", "Claude", "Max"];
@@ -382,7 +397,6 @@ console.log(dessertMessage);
 
 // let height = 20;
 // let width = 10;
-
 
 
 // console.log(getArea({ height, width }));
