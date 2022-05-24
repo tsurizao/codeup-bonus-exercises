@@ -130,19 +130,19 @@ const people = [
 
 
 // regular for loop
-for (var i = 0; i < people.length; i += 1) {
-    console.log(people[i].firstN);
-}
+// for (var i = 0; i < people.length; i += 1) {
+//     console.log(people[i].firstN);
+// }
 
 // forEach loop version
-people.forEach(function(person) {
-    console.log(person.firstN);
-});
+// people.forEach(function(person) {
+//     console.log(person.firstN);
+// });
 
 // for...of loop
-for (let person of people) {
-    console.log(person.firstN);
-}
+// for (let person of people) {
+//     console.log(person.firstN);
+// }
 
 // const lis = document.querySelectorAll('li');
 // for(let li of lis){
@@ -195,8 +195,9 @@ console.log(message);
 // const addOneC = (arg1) => arg1 + 1;
 
 // removed parens if one input only
-// const addOneD = arg1 => arg1 + 1;
+const addOneD = arg1 => arg1 + 1;
 
+const booleanTern = arg2 => "red" ? "true" : "false";
 
 // console.log(addOneA(2));
 // console.log(addOneB(2));
@@ -204,9 +205,7 @@ console.log(message);
 // console.log(addOneD(2));
 
 
-/*const addNames = function (fName, lName) {
-    return `${fName} ${lName}`;
-};*/
+const addNames = (fName, lName) => `${fName} ${lName}`;
 
 // const addNames = (fName, lName) => `${fName} ${lName}`;
 //
@@ -221,9 +220,7 @@ console.log(message);
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
-// var doubleInput = function(input) {
-//     return input * 2;
-// }
+var doubleInput = (input) => input * 2;
 
 
 // ============== Default Parameter Values
