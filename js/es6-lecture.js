@@ -2,32 +2,33 @@
 
 // ============== Exponentiation
 
-var num1 = Math.pow(4, 2); // before ES6
-var num2 = 4**2; // ES6 onwards
-console.log(num1);
-console.log(num2);
+// var num1 = Math.pow(4, 2); // before ES6
+// var num2 = 4**2; // ES6 onwards
+// console.log(num1);
+// console.log(num2);
 
 
 
 // ============== Let and Const (block scope vs. function scope)
 
 // var vs. let vs. const
-
-{
-    var a = 10;
-}
-
-{
-    let b = 20;
-}
-
-{
-    const c = 30;
-}
-
-console.log(a);
-console.log(b);
-console.log(c);
+//
+// {
+//     var a = 10;
+// }
+//
+// {
+//     let b = 20;
+// }
+//
+// {
+//     const c = 30;
+//     console.log(c);
+// }
+//
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 // block scope applies to any code structure that can use curly braces (loops, conditional logic, functions, etc.)
 
@@ -42,6 +43,7 @@ console.log(c);
 
 // let test = 'hello';
 // let test = 'world';
+// test = 'world';
 // console.log(test);
 
 // Use constants for everything you can and let for everything else. Don't use var.
@@ -53,8 +55,8 @@ console.log(c);
 
 // "You had me at 'meat tornado'" - Ron Swanson
 
-// let firstName = "Ron";
-// let lastName = "Swanson";
+let firstName = "Ron";
+let lastName = "Swanson";
 //
 // let quote = "";
 // quote += '"You had me at \'meat tornado\'" - ';
@@ -66,9 +68,11 @@ console.log(c);
 
 // ES6 Template Strings...
 
-// let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
-//
-// console.log(easierQuote);
+let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
+console.log(easierQuote);
+
+const output = `Hello my name is ${firstName}, how are you?`
+console.log(output);
 
 // Very helpful for building HTML with JS
 
