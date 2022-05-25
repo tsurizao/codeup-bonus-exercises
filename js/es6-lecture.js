@@ -54,8 +54,8 @@
 
 // "You had me at 'meat tornado'" - Ron Swanson
 
-let firstName = "Ron";
-let lastName = "Swanson";
+// let firstName = "Ron";
+// let lastName = "Swanson";
 //
 // let quote = "";
 // quote += '"You had me at \'meat tornado\'" - ';
@@ -66,11 +66,11 @@ let lastName = "Swanson";
 
 // ES6 Template Strings...
 
-let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
-console.log(easierQuote);
-
-const output = `Hello my name is ${firstName}, how are you?`
-console.log(output);
+// let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
+// console.log(easierQuote);
+//
+// const output = `Hello my name is ${firstName}, how are you?`
+// console.log(output);
 
 // Very helpful for building HTML with JS
 
@@ -89,44 +89,44 @@ console.log(output);
 
 // Can pass in expressions to ${}
 
-const pizza = `I ate ${2 + 2} slices of pizza.`;
-console.log(pizza);
+// const pizza = `I ate ${2 + 2} slices of pizza.`;
+// console.log(pizza);
 
 
 // ============== MINI EXERCISE
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
-const greatDessert = 'banana pudding';
-const badDessert = 'rhubarb pie';
-const dessertMessage = `Well, I love ${greatDessert} but I don't care for ${badDessert}.`;
-console.log(dessertMessage);
+// const greatDessert = 'banana pudding';
+// const badDessert = 'rhubarb pie';
+// const dessertMessage = `Well, I love ${greatDessert} but I don't care for ${badDessert}.`;
+// console.log(dessertMessage);
 
 
 // ============== for ..of loop (works on node lists!!!)
 
-const numbers = ["one", "two", "three"];
-
-for (let number of numbers) {
-    console.log(number);
-}
-
-const hello = "hello";
-
-for(let letter of hello){
-    console.log(letter);
-}
-
-const people = [
-    {
-        firstN: 'bob',
-        lastN: 'smith'
-    },
-    {
-        firstN: 'sally',
-        lastN: 'smith'
-    }
-];
+// const numbers = ["one", "two", "three"];
+//
+// for (let number of numbers) {
+//     console.log(number);
+// }
+//
+// const hello = "hello";
+//
+// for(let letter of hello){
+//     console.log(letter);
+// }
+//
+// const people = [
+//     {
+//         firstN: 'bob',
+//         lastN: 'smith'
+//     },
+//     {
+//         firstN: 'sally',
+//         lastN: 'smith'
+//     }
+// ];
 
 
 // regular for loop
@@ -161,17 +161,17 @@ const people = [
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 //
-var message = '';
-var names = ['John', 'Paul', 'George', 'Ringo'];
+// var message = '';
+// var names = ['John', 'Paul', 'George', 'Ringo'];
 // for (var i = 0; i < names.length; i += 1) {
 //     message += 'Hello, ' + names[i] + '\n';
 // }
 
-for (let name of names){
-    message += `Hello, ${name}\n`
-}
-
-console.log(message);
+// for (let name of names){
+//     message += `Hello, ${name}\n`
+// }
+//
+// console.log(message);
 
 
 // ============== Arrow Functions
@@ -195,9 +195,9 @@ console.log(message);
 // const addOneC = (arg1) => arg1 + 1;
 
 // removed parens if one input only
-const addOneD = arg1 => arg1 + 1;
-
-const booleanTern = arg2 => "red" ? "true" : "false";
+// const addOneD = arg1 => arg1 + 1;
+//
+// const booleanTern = arg2 => "red" ? "true" : "false";
 
 // console.log(addOneA(2));
 // console.log(addOneB(2));
@@ -205,7 +205,7 @@ const booleanTern = arg2 => "red" ? "true" : "false";
 // console.log(addOneD(2));
 
 
-const addNames = (fName, lName) => `${fName} ${lName}`;
+// const addNames = (fName, lName) => `${fName} ${lName}`;
 
 // const addNames = (fName, lName) => `${fName} ${lName}`;
 //
@@ -220,7 +220,7 @@ const addNames = (fName, lName) => `${fName} ${lName}`;
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
-var doubleInput = input => input * 2;
+// var doubleInput = input => input * 2;
 
 
 // ============== Default Parameter Values
@@ -296,6 +296,7 @@ var doubleInput = input => input * 2;
 // };
 // //
 // console.log(dog.name);
+// console.log(dog);
 
 
 // ============== Object / Array Destructuring
@@ -322,6 +323,7 @@ var doubleInput = input => input * 2;
 // console.log(age);
 // console.log(name);
 // console.log(isCute);
+// console.log(puppy);
 
 //
 // const data = {
@@ -342,12 +344,13 @@ var doubleInput = input => input * 2;
 //     return `
 //         <div class="card">
 //             <p>${hum[1]}</p>
-//             <p>${temp}</p>
+//             <p>Metric: ${degreesMetric}, Imperial: ${degreesImperial}</p>
 //             <p>${pressure}</p>
 //         </div>
 //     `;
 // }
 
+// console.log(buildWeatherPanel(data));
 
 // destructuring with arrays...
 
