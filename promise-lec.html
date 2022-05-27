@@ -322,27 +322,40 @@
     // Add the results to the disney div.
     // Include at least the character name in the list item.
 
-    const getOneCharacter =
+    let pageNumber = 0;
+    let getOneCharacter = page =>
         fetch(disneyAPI)
             .then(res => res.json())
             .then((res) => {
+                console.log(res.data);
+                document.getElementById("disney").innerHTML = "";
                 document.getElementById("disney").innerHTML += "<ul>";
-                res.data.forEach((char) => {
-                    console.log(char);
-                    createCharacter(char);
-                });
+                document.getElementById("disney").innerHTML +=
+                    `<div class="disney" style="display: flex; justify-content: center">
+                    <h3>${res.data[page].name}</h3>
+                    </div>
+                    <div class="disnet" style="display: flex; justify-content: center">
+                    <img src="${res.data[page].imageUrl}">
+                    </div>`;
                 document.getElementById("disney").innerHTML += "</ul>";
             });
+    getOneCharacter(pageNumber);
 
+    document.getElementById("prev").addEventListener("click", () => {
+        pageNumber--;
+        if(pageNumber < 0){
+            pageNumber = 49;
+        }
+        getOneCharacter(pageNumber);
+    });
 
-    const createCharacter = ({name, imageUrl}) => {
-        document.getElementById("disney").innerHTML +=
-            `<li class="disney" style="list-style: none">
-                <h3>${name}</h3>
-                <img src="${imageUrl}">
-            </li>`;
-    }
-
+    document.getElementById("next").addEventListener("click", () => {
+        pageNumber++;
+        if(pageNumber > 49){
+            pageNumber = 0;
+        }
+        getOneCharacter(pageNumber);
+    });
 
     // TODO/BONUS: Add previous and next page functionality to disney results
 
