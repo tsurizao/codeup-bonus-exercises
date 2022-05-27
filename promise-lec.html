@@ -314,53 +314,81 @@
 
 
     // TODO/CLASS: Add disney results to page!
-    const disneyAPI = 'https://api.disneyapi.dev/characters/';
+    // const disneyAPI = 'https://api.disneyapi.dev/characters/';
     //DOCS: "https://disneyapi.dev/docs";
     // ASK:
     // Can you call this api of disney characters and map each of these characters to
     // an unordered list. Attach that list to the page on the #disney id
     // Add the results to the disney div.
     // Include at least the character name in the list item.
-
-    let pageNumber = 0;
-    let getOneCharacter = page =>
-        fetch(disneyAPI)
-            .then(res => res.json())
-            .then((res) => {
-                console.log(res.data);
-                document.getElementById("disney").innerHTML = "";
-                document.getElementById("disney").innerHTML += "<ul>";
-                document.getElementById("disney").innerHTML +=
-                    `<div class="disney" style="display: flex; justify-content: center">
-                    <h3>${res.data[page].name}</h3>
-                    </div>
-                    <div class="disnet" style="display: flex; justify-content: center">
-                    <img src="${res.data[page].imageUrl}">
-                    </div>`;
-                document.getElementById("disney").innerHTML += "</ul>";
-            });
-    getOneCharacter(pageNumber);
-
-    document.getElementById("prev").addEventListener("click", () => {
-        pageNumber--;
-        if(pageNumber < 0){
-            pageNumber = 49;
-        }
-        getOneCharacter(pageNumber);
-    });
-
-    document.getElementById("next").addEventListener("click", () => {
-        pageNumber++;
-        if(pageNumber > 49){
-            pageNumber = 0;
-        }
-        getOneCharacter(pageNumber);
-    });
-
     // TODO/BONUS: Add previous and next page functionality to disney results
 
+
+    // let pageNumber = 0;
+    // let getOneCharacter = page =>
+    //     fetch(disneyAPI)
+    //         .then(res => res.json())
+    //         .then((res) => {
+    //             console.log(res.data);
+    //             document.getElementById("disney").innerHTML = "";
+    //             document.getElementById("disney").innerHTML += "<ul>";
+    //             document.getElementById("disney").innerHTML +=
+    //                 `<div class="disney" style="display: flex; justify-content: center">
+    //                 <h3>${res.data[page].name}</h3>
+    //                 </div>
+    //                 <div class="disnet" style="display: flex; justify-content: center">
+    //                 <img src="${res.data[page].imageUrl}">
+    //                 </div>`;
+    //             document.getElementById("disney").innerHTML += "</ul>";
+    //         });
+    // getOneCharacter(pageNumber);
+
+    // document.getElementById("prev").addEventListener("click", () => {
+    //     pageNumber--;
+    //     if(pageNumber < 0){
+    //         pageNumber = 49;
+    //     }
+    //     getOneCharacter(pageNumber);
+    // });
+    //
+    // document.getElementById("next").addEventListener("click", () => {
+    //     pageNumber++;
+    //     if(pageNumber > 49){
+    //         pageNumber = 0;
+    //     }
+    //     getOneCharacter(pageNumber);
+    // });
+
+
     // TODO/BONUS: Take Bobs Burgers api and return what the most watched episode was.
+    // const bobsBurgersApi = "https://bobsburgers-api.herokuapp.com/episodes"
+
+    // fetch(bobsBurgersApi)
+    //     .then((res) => res.json())
+    //     .then((res) => res.reduce((previousEpisode, currentEpisode) => {
+    //         // const currentViewers = (currentEpisode.totalViewers.split(" ")[0]);
+    //         console.log(previousEpisode.totalViewers);
+    //         // console.log(currentEpisode.totalViewers);
+    //         // const previousViewers = (previousEpisode.totalViewers.split(" ")[0]);
+    //         // if (previousViewers < currentViewers) {
+    //         //     previousEpisode = currentEpisode;
+    //         // }
+    //         // console.log(previousEpisode.name);
+    //     }));
+
     const bobsBurgersApi = "https://bobsburgers-api.herokuapp.com/episodes"
+
+    // Returns the most viewed episode of Bob's Burgers, you can find the least viewed
+    // episode by reversing the < to > in the if statement
+    fetch(bobsBurgersApi)
+        .then((res) => res.json())
+        .then((res) => res.reduce((previousEpisode, currentEpisode) => {
+            if(previousEpisode.totalViewers < currentEpisode.totalViewers){
+                previousEpisode = currentEpisode;
+            }
+            return previousEpisode;
+        }))
+    .then((res) => console.log(res.name));
 
 
 </script>
