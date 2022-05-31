@@ -37,6 +37,16 @@ const handleDoDelete = (event) => {
     // TODO: Delete User by ID
     // TODO: Hide Modal
     // TODO: Reload form
+
+    let settings = fetchSettings;
+        settings.method = "DELETE";
+
+    fetch(baseURL + "/user/" + event.target.value, fetchSettings)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res);
+            disableModal();
+        });
 }
 
 
@@ -46,6 +56,13 @@ export const handleDisplayProfile = (event) => {
     toggleModal();
     // TODO: Create fetch to get the profile information
     // TODO: Map info to modal in view.
+    fetch(baseURL + "/user/" + event.target.dataset.id, fetchSettings)
+        .then(res => res.json())
+        .then(res => {
+            modal.main.innerHTML = mapUserToView(res);
+            modal.foot.innerHTML = `<button class="close-modal">Close</button>`;
+            $(".close-modal").click(() => disableModal());
+        });
 }
 
 
@@ -54,11 +71,18 @@ export const handleDisplayProfile = (event) => {
 
 // Example: get fetch request
 export const handleDisplayUpdate = (event) => {
-
+    enableModal();
     //TODO: Get Data from user by Id
     //TODO: Map to update form
     //TODO: Add handlers
 
+    fetch(baseURL + "/user/" + event.target.value, fetchSettings)
+        .then(res => res.json())
+        .then(res => {
+            modal.main.innerHMTL = mapUserToUpdate(res);
+            modal.foot.innerHTML = mapButtonsForUpdate(res.id);
+            $("button.confirm.update").click(handleDoUpdate)
+        });
 };
 
 
@@ -66,6 +90,8 @@ export const handleDisplayUpdate = (event) => {
 // Example: PUT fetch request
 export const handleDoUpdate = (event) => {
     event.preventDefault();
+
+    const form = document.forms.update;
 
     // TODO: GET form data
     // TODO: Update the user with the new form data.
@@ -93,10 +119,13 @@ export const toggleModal = () => {
     modal.container.classList.toggle("hide")
     modal.all.classList.toggle("hide");
 }
-
 export const enableModal = () => {
     modal.container.classList.remove("hide")
     modal.all.classList.remove("hide");
+}
+export const disableModal = () => {
+    modal.container.classList.add("hide")
+    modal.all.classList.add("hide");
 }
 
 
